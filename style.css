@@ -1,4 +1,4 @@
-/* ڕێگاکانی بنەڕەتی و نووسینی کوردی */
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,601 +6,648 @@
 }
 
 body {
-    font-family: 'Cairo', sans-serif;
-    background-color: #f8faff;
-    color: #1f2937;
-    line-height: 1.6;
-    direction: rtl;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 25px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Header - سەرپەڕ */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+ul {
+    list-style: none;
+}
+
+/* Header Styles */
+#wh_head {
+    background: #f9f9f9;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
 }
 
-.header-container {
+.nhs {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    padding: 10px 20px;
+    position: relative;
 }
 
-.logo-area {
-    flex-shrink: 0;
+.logo.apkaward a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #45a037;
+    background: url('https://apkawards.com/img/logo.png?v=2017091503') no-repeat left center;
+    background-size: contain;
+    padding-left: 40px;
+    display: block;
 }
 
-.logo {
+/* Navigation */
+.nav_phone, .nav_search {
+    cursor: pointer;
+    display: none;
+}
+
+.nav_phone i {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+/* Search Form */
+.search_form {
+    flex: 0 1 300px;
+}
+
+.search_form div {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: 800;
-    color: #1f2937;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
 }
 
-.logo i {
-    color: #4361ee;
-    font-size: 32px;
-}
-
-.logo span {
-    color: #4361ee;
-}
-
-.main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 5px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #4b5563;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 40px;
-    transition: all 0.2s;
-}
-
-.main-nav a:hover, .main-nav a.active {
-    background-color: #4361ee;
-    color: white;
-}
-
-.search-box {
-    display: flex;
-    align-items: center;
-    background-color: #f1f4f9;
-    border-radius: 50px;
-    padding: 5px;
-    width: 280px;
-    border: 1px solid transparent;
-    transition: 0.2s;
-}
-
-.search-box:focus-within {
-    border-color: #4361ee;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
-}
-
-.search-box input {
+.search_form input[type="text"] {
     flex: 1;
-    background: transparent;
     border: none;
-    padding: 10px 18px;
-    font-family: 'Cairo', sans-serif;
-    font-size: 15px;
+    padding: 8px 12px;
+    font-size: 14px;
     outline: none;
 }
 
-.search-box button {
-    background: transparent;
+.search_form input[type="submit"] {
+    width: 40px;
     border: none;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    color: #4361ee;
+    background: #fff url('https://apkawards.com/img/ss-icon.png?v=2017091503') no-repeat center;
+    background-size: 60%;
     cursor: pointer;
-    font-size: 18px;
-    transition: 0.2s;
+    border-left: 1px solid #ccc;
 }
 
-.search-box button:hover {
-    background-color: rgba(67, 97, 238, 0.1);
+/* Navigation List */
+.nav_list {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 }
 
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
-    color: #1f2937;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(145deg, #f0f3ff 0%, #ffffff 100%);
-    padding: 70px 0;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #eaeef5;
-}
-
-.hero-content {
-    max-width: 650px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #111827;
-}
-
-.hero .highlight {
-    color: #4361ee;
-    background: linear-gradient(145deg, #4361ee, #7209b7);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #4b5563;
-    margin-bottom: 35px;
-}
-
-.hero-buttons {
+.nav_list ul {
     display: flex;
-    gap: 15px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 32px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: 0.2s;
-    border: 2px solid transparent;
-}
-
-.btn-primary {
-    background-color: #4361ee;
-    color: white;
-    box-shadow: 0 10px 20px -8px rgba(67, 97, 238, 0.4);
-}
-
-.btn-primary:hover {
-    background-color: #3651d4;
-    transform: translateY(-2px);
-    box-shadow: 0 15px 25px -8px rgba(67, 97, 238, 0.5);
-}
-
-.btn-outline {
-    background-color: transparent;
-    border-color: #4361ee;
-    color: #4361ee;
-}
-
-.btn-outline:hover {
-    background-color: #4361ee;
-    color: white;
-}
-
-/* بەشەکان */
-.section {
-    padding: 50px 0;
-}
-
-.section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.title-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.title-with-icon i {
-    font-size: 28px;
-    color: #4361ee;
-    background: rgba(67, 97, 238, 0.1);
+    flex-wrap: wrap;
     padding: 10px;
-    border-radius: 14px;
-}
-
-.title-with-icon h2 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1f2937;
-}
-
-.see-more {
-    text-decoration: none;
-    color: #4361ee;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
     gap: 5px;
-    padding: 8px 16px;
-    border-radius: 40px;
-    background-color: #eef2ff;
-    transition: 0.2s;
 }
 
-.see-more:hover {
-    background-color: #4361ee;
-    color: white;
-}
-
-.see-more i {
+.nav_list li a {
+    display: block;
+    padding: 8px 15px;
     font-size: 14px;
+    color: #666;
+    border-radius: 3px;
+    transition: all 0.3s;
 }
 
-/* تۆڕی کارتەکان */
-.apps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
+.nav_list li a:hover {
+    background-color: #45a037;
+    color: #fff;
 }
 
-.app-card {
-    background: white;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    transition: all 0.25s;
-    padding: 20px 18px;
-    display: flex;
-    flex-direction: column;
+.nav_list li.current-cat a {
+    background-color: #45a037;
+    color: #fff;
 }
 
-.app-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 30px -12px rgba(67, 97, 238, 0.15);
-    border-color: rgba(67, 97, 238, 0.2);
-}
-
-.app-icon-placeholder {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, #4361ee22, #7209b722);
-    border-radius: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-    border: 1px solid #eef2ff;
-}
-
-.app-icon-placeholder i {
-    font-size: 32px;
-    color: #4361ee;
-    opacity: 0.8;
-}
-
-.app-card h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: #111827;
-    line-height: 1.3;
-}
-
-.app-version {
-    font-size: 14px;
-    color: #6b7280;
-    margin-bottom: 8px;
-}
-
-.app-mod {
-    display: inline-block;
-    background: #eef2ff;
-    color: #4361ee;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 30px;
-    margin: 10px 0 15px;
-}
-
-.app-meta {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 18px;
-    font-size: 13px;
-    color: #6b7280;
-}
-
-.app-meta span i {
-    margin-left: 5px;
-    color: #4361ee;
-}
-
-.download-btn {
-    background-color: #4361ee;
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border-radius: 16px;
-    font-weight: 600;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: auto;
-    border: 1px solid transparent;
-    transition: 0.2s;
-}
-
-.download-btn:hover {
-    background-color: #3651d4;
-}
-
-/* Features Section */
-.features {
-    background-color: #ffffff;
-    border-radius: 60px 60px 0 0;
-    margin-top: 30px;
-    padding: 80px 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 60px;
-    color: #111827;
-}
-
-.section-title span {
-    color: #4361ee;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.feature-card {
-    background: #f8faff;
-    padding: 35px 25px;
-    border-radius: 32px;
-    text-align: center;
-    border: 1px solid #eef2ff;
-    transition: 0.2s;
-}
-
-.feature-card:hover {
-    background: #ffffff;
-    border-color: #4361ee;
-    transform: scale(1.03);
-    box-shadow: 0 20px 30px -10px rgba(67, 97, 238, 0.15);
-}
-
-.feature-icon {
-    font-size: 48px;
-    color: #4361ee;
-    margin-bottom: 20px;
-    background: white;
-    padding: 18px;
-    border-radius: 30px;
-    box-shadow: 0 10px 15px -8px rgba(0,0,0,0.1);
-}
-
-.feature-card h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.feature-card p {
-    color: #6b7280;
-    font-size: 16px;
-}
-
-/* Footer */
-footer {
-    background-color: #0f172a;
-    color: #cbd5e1;
-    padding: 70px 0 20px;
-    border-top: 1px solid #1e293b;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 28px;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.footer-logo i {
-    color: #4361ee;
-}
-
-.footer-logo span {
-    color: #4361ee;
-}
-
-.footer-about p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    color: #94a3b8;
-    font-size: 22px;
-    transition: 0.2s;
-}
-
-.social-links a:hover {
-    color: #4361ee;
-}
-
-.footer-links h4 {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 25px;
-    font-weight: 700;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 15px;
-}
-
-.footer-links a {
-    color: #94a3b8;
-    text-decoration: none;
-    transition: 0.2s;
-    font-size: 16px;
-}
-
-.footer-links a:hover {
-    color: #4361ee;
+.nav_list li a svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
     margin-right: 5px;
 }
 
-.footer-newsletter h4 {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: 700;
+.nav_phone.nactop {
+    display: none;
 }
 
-.footer-newsletter p {
-    margin-bottom: 20px;
+/* Main Content */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-#newsletter-form {
+/* Section Styles */
+.Populargames {
+    margin-bottom: 30px;
+}
+
+.most_box {
     display: flex;
-    background: #1e293b;
-    border-radius: 60px;
-    padding: 5px;
-    border: 1px solid #334155;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
-#newsletter-form input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    padding: 12px 18px;
-    color: white;
-    font-family: 'Cairo', sans-serif;
-    outline: none;
+.most_box h2.inx {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
 }
 
-#newsletter-form input::placeholder {
-    color: #64748b;
+.smore {
+    color: #45a037;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s;
 }
 
-#newsletter-form button {
-    background: #4361ee;
-    border: none;
-    color: white;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.2s;
+.smore:hover {
+    background-color: #45a037;
+    color: #fff;
 }
 
-#newsletter-form button:hover {
-    background-color: #3651d4;
+/* Main Box Grid */
+.main-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
 }
 
-.footer-bottom {
+.main-box article {
+    width: 12.5%;
+    padding: 10px;
+}
+
+/* Game Card Styles */
+.apkbox {
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.apkbox:hover {
+    background: #f5f5f5;
+    transform: translateY(-5px);
+}
+
+.pic {
+    display: block;
     text-align: center;
-    padding-top: 40px;
-    border-top: 1px solid #1e293b;
-    color: #64748b;
+    margin-bottom: 10px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
+.pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.apkinfo strong {
+    display: block;
+    text-align: center;
+}
+
+.apkinfo strong a {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cmr {
+    display: block;
+    margin-top: 5px;
+}
+
+.cmr img {
+    width: 12px;
+    height: 12px;
+}
+
+/* Special Layout for Update Games */
+.csszp .main-box article {
+    width: 25%;
+}
+
+.csszp .apkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.csszp .pic {
+    width: 80px;
+    margin-bottom: 0;
+}
+
+.csszp .apkinfo {
+    flex: 1;
+}
+
+.csszp .apkinfo strong {
+    text-align: left;
+}
+
+.csszp .apkinfo strong a {
+    white-space: normal;
+    max-height: 40px;
+    line-height: 1.3;
+}
+
+.emo.cmz {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Categories Grid */
+.uksss {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.uksss li {
+    width: 10%;
+}
+
+.uksss li a {
+    display: block;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 5px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.uksss li a:hover {
+    border-color: #45a037;
+    color: #45a037;
+}
+
+.uksss li img {
+    display: block;
+    margin: 0 auto 5px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Topics Games */
+.topics_box ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.topics_box li {
+    width: 25%;
+    padding: 10px;
+}
+
+.topics_box li a {
+    display: block;
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+}
+
+.topics_box li img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.topics_box li strong {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Load More Button */
+.cssmore {
+    max-width: 1160px;
+    margin: 20px auto 30px;
+}
+
+.cssmore a {
+    display: block;
+    background: #fff;
+    color: #45a037;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.cssmore a:hover {
+    background: #45a037;
+    color: #fff;
+}
+
+/* Footer Navigation */
+.foot-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 99;
+    display: none;
+}
+
+.aumts {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.aumts a {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+.aumts a i {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.aumts a:hover,
+.aumts a.ishover {
+    color: #45a037;
+}
+
+.aumts a svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Main Footer */
+#footer {
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    margin-top: 40px;
+}
+
+#footer i {
+    margin-left: 20px;
+}
+
+#footer i a {
+    margin-left: 5px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+#footer i a:hover {
+    color: #45a037;
+}
+
+/* Go Top Button */
+#goTop {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 98;
+    display: none;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.02);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.06);
+    text-align: center;
+    border-radius: 5px;
+    line-height: 50px;
+    color: #666;
+    transition: all 0.3s;
+}
+
+#goTop:hover {
+    background-color: #45a037;
+    color: #fff;
+}
+
+/* Mobile Nav */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 98;
+}
+
+/* Scrollable Containers */
+.topics_boxsoll {
+    position: relative;
+    width: 100%;
+}
+
+.sollaaa {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1200px) and (max-width: 3200px) {
+    .nav_list {
+        border-radius: 3px;
+        margin-top: 10px;
     }
 }
 
-@media (max-width: 900px) {
-    .header-container {
-        height: 70px;
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .main-box article {
+        width: 16.66%;
     }
-    .main-nav, .search-box {
-        display: none;
+    
+    .csszp .main-box article {
+        width: 33.33%;
     }
-    .mobile-menu-btn {
-        display: block;
+    
+    .uksss li {
+        width: 16.66%;
     }
-    .hero h1 {
-        font-size: 38px;
-    }
-}
-
-@media (max-width: 640px) {
-    .hero-buttons {
-        flex-direction: column;
-    }
-    .btn {
+    
+    .nav_list ul {
         justify-content: center;
     }
-    .features-grid {
-        grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    /* Header Mobile */
+    .nav_phone, .nav_search {
+        display: block;
     }
-    .footer-content {
-        grid-template-columns: 1fr;
+    
+    .search_form {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f9f9f9;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .apps-grid {
-        grid-template-columns: 1fr;
+    
+    .search_form.nav_sblock {
+        display: block;
     }
+    
+    /* Navigation Mobile */
+    .nav_list {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        width: 80%;
+        max-width: 300px;
+        background: #fff;
+        z-index: 100;
+        overflow-y: auto;
+        transition: left 0.3s;
+    }
+    
+    .nav_list.nav_block {
+        left: 0;
+    }
+    
+    .nav_list ul {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+    
+    .nav_phone.nactop {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 101;
+    }
+    
+    .mobile-nav {
+        display: none;
+    }
+    
+    .navbody .mobile-nav {
+        display: block;
+    }
+    
+    /* Grid Mobile */
+    .main-box article {
+        width: 33.33%;
+    }
+    
+    .csszp .main-box article {
+        width: 100%;
+    }
+    
+    .csszp .apkbox {
+        flex-direction: row;
+    }
+    
+    .uksss li {
+        width: 33.33%;
+    }
+    
+    .topics_box li {
+        width: 50%;
+    }
+    
+    /* Footer Mobile */
+    .foot-nav {
+        display: block;
+    }
+    
+    #footer {
+        margin-bottom: 70px;
+    }
+    
+    #goTop {
+        bottom: 70px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    #footer i {
+        display: block;
+        margin: 10px 0 0;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    .main-box article {
+        width: 50%;
+    }
+    
+    .uksss li {
+        width: 50%;
+    }
+}
+
+/* Category Icons */
+li.cat-item-psp a {
+    background-image: url('https://apkawards.com/img/navicon/15.png');
+    background-repeat: no-repeat;
+    background-position: 24px 5px;
+    background-size: 20px;
+}
+
+li.cat-item-12 a {
+    background-image: url('https://apkawards.com/img/navicon/17.png');
+    background-repeat: no-repeat;
+    background-position: 24px 5px;
+    background-size: 20px;
+}
+
+li.cat-item-21 a {
+    background-image: url('https://apkawards.com/img/navicon/16.png');
+    background-repeat: no-repeat;
+    background-position: 24px 4px;
+    background-size: 20px;
 }

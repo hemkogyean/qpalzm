@@ -1,166 +1,233 @@
 <!DOCTYPE html>
-<html lang="ku" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>ئەپ و یارییەکانی ئەندرۆید | داگرتنی ڕاستەوخۆ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>Download APK Mod for Android - APKAward.com</title>
+    <link rel="canonical" href="https://apkaward.com/">
+    <meta property="og:url" content="https://apkaward.com/">
+    <link rel="apple-touch-icon" sizes="256x256" href="https://apkawards.com/icon-256.png?=201796">
+    <link rel="shortcut icon" href="https://apkawards.com/favicon.ico?=201796" type="images/x-icon">
     <link rel="stylesheet" href="style.css">
-    <!-- فۆنتێ پیشەگەرەکان -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- فۆنت ئایکۆنی فۆنت ئەیسەم 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <!-- SVG Symbols -->
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="aaa_search" viewBox="0 0 24 24">
+                <path d="M15.5,14h-.79l-.28-.27a6.51,6.51,0,1,0-.7.7l.27.28v.79l5,4.99L20.49,19Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z"></path>
+            </symbol>
+            <symbol id="aaa_close" viewBox="0 0 24 24">
+                <path d="M12,13.4l-4.9,4.9c-.34.37-1.06.37-1.4,0-.37-.34-.37-1.06,0-1.4,0,0,4.9-4.9,4.9-4.9l-4.9-4.9c-.37-.34-.37-1.06,0-1.4.34-.37,1.06-.37,1.4,0,0,0,4.9,4.9,4.9,4.9l4.9-4.9c.34-.37,1.06-.37,1.4,0,.37.34.37,1.06,0,1.4,0,0-4.9,4.9-4.9,4.9l4.9,4.9c.37.34.37,1.06,0,1.4-.34.37-1.06.37-1.4,0,0,0-4.9-4.9-4.9-4.9Z"></path>
+            </symbol>
+            <symbol id="aaa_home" viewBox="0 0 400 400">
+                <path fill-rule="evenodd" d="M240.591 79.127c-14.233-9.376-21.35-14.064-28.953-15.6a40.002 40.002 0 0 0-20.177 1.13c-7.383 2.375-13.932 7.828-27.03 18.735L89.475 145.81c-8.471 7.054-12.707 10.581-15.752 14.906a40.007 40.007 0 0 0-5.92 12.633c-1.374 5.107-1.374 10.619-1.374 21.642v75.967c0 16.34 0 24.51 3.145 30.826a29.997 29.997 0 0 0 12.661 13.058c6.217 3.338 14.383 3.59 30.714 4.094l19.249.593h.001c7.223.223 10.836.334 13.647-.982a12.998 12.998 0 0 0 5.846-5.453c1.51-2.712 1.65-6.324 1.931-13.546l1.21-31.077c.146-3.74.266-6.818.456-9.413L110 239.5l96.049-2.362a20.672 20.672 0 0 1 1.851.038c7.365-.122 11.667.113 15.149 1.777a20 20 0 0 1 8.965 8.53c2.287 4.229 2.422 9.837 2.691 21.054l.847 35.334c.164 6.849.246 10.273 1.61 12.926a13.008 13.008 0 0 0 5.394 5.498c2.626 1.415 6.048 1.563 12.893 1.858l27.481 1.186h.001c17.451.753 26.177 1.13 32.876-2.032a29.998 29.998 0 0 0 13.745-13.165C333 303.585 333 294.852 333 277.384V174.479c0-12.602 0-18.903-1.745-24.616a40.01 40.01 0 0 0-7.451-13.831c-3.811-4.6-9.073-8.066-19.597-14.999l-63.616-41.906Zm-22.245 24.468 74.313 49.961a20.002 20.002 0 0 1 8.841 16.598V185c0 10.833-13.219 16.12-20.69 8.276l-73.243-76.906a8.408 8.408 0 0 1 10.779-12.775Z" clip-rule="evenodd"></path>
+            </symbol>
+            <symbol id="aaa_arrowleft" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+            </symbol>
+            <symbol id="aaa_top" viewBox="0 0 24 24">
+                <path d="M11,19v-3.1c-1.59-.35-3.01-1.41-3.6-2.95-2.45-.25-4.45-2.48-4.4-4.95,0-.81-.1-1.83.59-2.41.71-.87,2.45-.53,3.41-.59-.03-1.07.93-2.03,2-2,0,0,6,0,6,0,1.07-.03,2.03.93,2,2,.97.06,2.7-.28,3.41.59.68.59.6,1.6.59,2.41.05,2.47-1.95,4.7-4.4,4.95-.59,1.54-2.01,2.6-3.6,2.95v3.1h3c.88-.05,1.34,1.13.71,1.71-.19.19-.43.29-.71.29h-8c-.28,0-.52-.1-.71-.29-.62-.59-.17-1.76.71-1.71,0,0,3,0,3,0ZM7,10.8v-3.8h-2v1c-.02,1.25.82,2.39,2,2.8ZM12,14c1.63.04,3.04-1.37,3-3,0,0,0-6,0-6h-6v6c-.04,1.63,1.37,3.04,3,3ZM17,10.8c1.18-.41,2.02-1.55,2-2.8,0,0,0-1,0-1h-2v3.8Z"></path>
+            </symbol>
+            <symbol id="aaa_new" viewBox="0 0 24 24">
+                <path d="M10.55,18.2l5.18-6.2h-4l.72-5.68-4.63,6.68h3.48l-.75,5.2ZM9,15h-3.1c-.78.04-1.32-.95-.82-1.58,0,0,7.48-10.75,7.48-10.75.71-1.07,2.45-.45,2.25.85,0,0-.8,6.47-.8,6.47h3.88c.85-.05,1.34,1.04.75,1.65,0,0-8.22,9.85-8.22,9.85-.75.98-2.38.22-2.2-.98l.8-5.52Z"></path>
+            </symbol>
+            <symbol id="aaa_mod" viewBox="0 0 24 24">
+                <path d="M15.28,8.16c-1.13.66-.14,2.38,1,1.73,1.13-.66.14-2.38-1-1.73ZM13.68,11.39c-1.13.66-.14,2.38,1,1.73,1.13-.66.14-2.38-1-1.73ZM9.72,12.53l-.87.5c-.39-.71-.88-1.77-1.87-1.23-.96.59-.29,1.54.13,2.23-.71.39-1.77.88-1.23,1.87.59.96,1.54.29,2.23-.13.39.71.88,1.77,1.87,1.23.96-.59.29-1.54-.13-2.23l.87-.5c1.13-.66.14-2.38-1-1.73ZM22.09,10.11C19,4.58,17.87.18,11,4.86c-.85-1-2.22-1.27-3.45-.82,0,0-.13.04-.13.04-.5.14-.61.17-.69.17-1.4.16-1.34-2.96-3.02-2.11-.97.6-.28,1.56.15,2.25.57,1.18,1.69,1.95,3.01,1.85.7,0,1.69-.64,2.3-.32l-3.8,2.19c-1.95,1.16-3.83,1.96-4.03,4.29-.07,1.94.98,3.16,1.98,5.03,1.4,2.7,3.35,5.6,6.58,4.12,1.58-.67,6.97-3.98,8.64-4.88,2.78-1.39,5.13-3.36,3.55-6.56ZM20.57,12.2c-.23,1.52-1.58,1.76-3.09,2.77,0,0-6.06,3.5-6.06,3.5-1.98,1.05-3.43,2.48-4.89.38-.86-1.48-3.11-4.58-3.2-6.27.23-1.52,1.58-1.76,3.09-2.77,0,0,4.76-2.75,4.76-2.75,1.02-.58,2.87-1.7,3.61-2,.81-.33,1.03-.29,1.64-.05,1.09.69,1.51,1.85,2.45,3.37.84,1.58,1.65,2.52,1.69,3.81Z"></path>
+            </symbol>
+            <symbol id="aaa_star" viewBox="0 0 24 24">
+                <path d="M21.54,9.79c-.82-1.66-2.24-1.27-3.91-1.55-.77-.09-1.55-.07-2.02-.33-.71-.87-1.27-3.12-1.85-3.99-.77-1.61-2.73-1.63-3.51,0-.33.56-.7,1.51-1.07,2.42-.32.73-.41,1.2-.79,1.57-.46.26-.94.2-1.73.3-.91.08-1.95.16-2.57.32-1.66.26-2.27,2.03-1.09,3.25.46.57,1.47,1.44,2.18,2.1.51.51.88.69,1.05,1.18.06.43-.09.8-.21,1.45-.22,1.61-1.03,2.83-.08,4.23.66.87,2.08.73,2.73.15.64-.39,2.08-1.67,2.76-2.14.54-.3.6-.31,1.14,0,.69.47,2.12,1.74,2.76,2.14,1.51,1.21,3.54-.03,3.14-1.93-.07-.8-.56-2.6-.7-3.51-.09-.82.44-.93,1.05-1.57.71-.65,1.72-1.53,2.18-2.1.37-.45.82-1.15.54-1.99Z"></path>
+            </symbol>
+        </defs>
+    </svg>
 
-    <!-- Header - سەرپەڕ -->
-    <header>
-        <div class="container header-container">
-            <div class="logo-area">
-                <a href="#" class="logo">
-                    <i class="fas fa-robot"></i> <!-- ئایکۆنی ڕۆبۆت -->
-                    <span>ئەپ</span> ستۆر
-                </a>
+    <!-- Header -->
+    <div id="wh_head">
+        <div class="nhs">
+            <div class="logo apkaward">
+                <a href="/">APKAward.com</a>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#" class="active">سەرەکی</a></li>
-                    <li><a href="#">یارییەکان</a></li>
-                    <li><a href="#">ئەپەکان</a></li>
-                    <li><a href="#">مۆدەکان</a></li>
-                    <li><a href="#">فێرکاری</a></li>
-                </ul>
-            </nav>
-            <div class="search-box">
-                <input type="text" placeholder="گەڕان بۆ یاری یان ئەپ...">
-                <button type="submit"><i class="fas fa-search"></i></button>
+            <div class="nav_phone">
+                <i></i><i></i><i></i>
             </div>
-            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-        </div>
-    </header>
-
-    <!-- Hero Section - بەشی پێشوازی -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>داگرتنی یاری و ئەپی <span class="highlight">ئەندرۆید</span> بە خێراترین شێوە</h1>
-            <p>هەموو ڕۆژێک بە بەردەوامی نوێ دەکرێتەوە. ئەپ و یاری مۆدکراو و فێرکاری.</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> یارییە نوێیەکان</a>
-                <a href="#" class="btn btn-outline"><i class="fas fa-play-circle"></i> فێرکاریەکان</a>
+            <div class="nav_search">
+                <i class="aaa_close"><svg width="24" height="24"><use xlink:href="#aaa_close"></use></svg></i>
+                <i class="aaa_search"><svg width="24" height="24"><use xlink:href="#aaa_search"></use></svg></i>
             </div>
-        </div>
-    </section>
-
-    <!-- Update Games Section - یاری و ئەپە نوێیەکان -->
-    <section class="section update-games">
-        <div class="container">
-            <div class="section-header">
-                <div class="title-with-icon">
-                    <i class="fas fa-bolt icon-bg"></i>
-                    <h2>یاری و ئەپە نوێیەکان</h2>
-                </div>
-                <a href="#" class="see-more">بینینی هەموو <i class="fas fa-arrow-left"></i></a>
-            </div>
-            <div class="apps-grid" id="update-games-container">
-                <!-- زانیارییەکان لە JavaScriptـەوە دادەنرێت -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Ongoing Games Section - یارییە بەردەوامەکان -->
-    <section class="section ongoing-games">
-        <div class="container">
-            <div class="section-header">
-                <div class="title-with-icon">
-                    <i class="fas fa-fire icon-bg"></i>
-                    <h2>یارییە بەردەوامەکان</h2>
-                </div>
-                <a href="#" class="see-more">بینینی هەموو <i class="fas fa-arrow-left"></i></a>
-            </div>
-            <div class="apps-grid" id="ongoing-games-container">
-                <!-- زانیارییەکان لە JavaScriptـەوە دادەنرێت -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section - تایبەتمەندییەکان -->
-    <section class="section features">
-        <div class="container">
-            <h2 class="section-title">بۆچی <span>ئێمە</span> هەڵبژێریت؟</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-shield-alt feature-icon"></i>
-                    <h3>پاراستنی تەواو</h3>
-                    <p>هەموو فایلەکانمان پشکنینیان بۆ کراوە و بێ کێشەن.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-bolt feature-icon"></i>
-                    <h3>خێراترین نوێکردنەوە</h3>
-                    <p>یەکەم کەس بە کە لە وەشانە نوێیەکان ئاگادار دەبیت.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-infinity feature-icon"></i>
-                    <h3>مۆدی بێسنوور</h3>
-                    <p>پارەی بێسنوور، کڕینی بێبەرامبەر و تایبەتمەندی کراوە.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-headset feature-icon"></i>
-                    <h3>پشتیوانی ٢٤/٧</h3>
-                    <p>هەر کێشەیەکت هەبێت، تیمەکەمان ئامادەیە.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer - پێڕاگە -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <i class="fas fa-robot"></i> <span>ئەپ</span> ستۆر
+            <div class="search_form hotssss">
+                <form class="searchform" id="searchform" method="get" name="searchform" role="search">
+                    <div>
+                        <input type="text" value="" name="s" id="s" placeholder="Search..." autofocus="">
+                        <input type="submit" id="searchsubmit" value="Search">
                     </div>
-                    <p>گەورەترین سەرچاوەی بڵاوکردنەوەی یاری و ئەپی مۆدکراوی ئەندرۆید. ڕۆژانە نوێ دەکرێینەوە.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav_list">
+        <div class="nav_phone nactop">
+            <svg width="24" height="24"><use xlink:href="#aaa_arrowleft"></use></svg>
+        </div>
+        <ul class="row">
+            <li class="recent-games current-cat"><a href="/"><svg width="24" height="24"><use xlink:href="#aaa_home"></use></svg>Home</a></li>
+            <li class="Popular-games"><a href="/popular"><svg width="24" height="24"><use xlink:href="#aaa_top"></use></svg>Popular Games</a></li>
+            <li class="news-games"><a href="/new"><svg width="24" height="24"><use xlink:href="#aaa_new"></use></svg>New Games</a></li>
+            <li class="mods-games"><a href="/mod"><svg width="24" height="24"><use xlink:href="#aaa_mod"></use></svg>Mod Games</a></li>
+            <li class="search-games"><a href="/editors-choice"><svg width="24" height="24"><use xlink:href="#aaa_star"></use></svg>Editor's Choice</a></li>
+            <li class="cat-item cat-item-5"><a href="https://apkaward.com/action" title="Action">Action</a></li>
+            <li class="cat-item cat-item-7"><a href="https://apkaward.com/adventure" title="Adventure">Adventure</a></li>
+            <li class="cat-item cat-item-8"><a href="https://apkaward.com/arcade" title="Arcade">Arcade</a></li>
+            <li class="cat-item cat-item-9"><a href="https://apkaward.com/board" title="Board">Board</a></li>
+            <li class="cat-item cat-item-10"><a href="https://apkaward.com/card" title="Card">Card</a></li>
+            <li class="cat-item cat-item-12"><a href="https://apkaward.com/casual" title="Casual">Casual</a></li>
+            <li class="cat-item cat-item-13"><a href="https://apkaward.com/educational" title="Educational">Educational</a></li>
+            <li class="cat-item cat-item-psp"><a href="https://apkaward.com/psp" title="PSP">PSP</a></li>
+            <li class="cat-item cat-item-15"><a href="https://apkaward.com/puzzle" title="Puzzle">Puzzle</a></li>
+            <li class="cat-item cat-item-21"><a href="https://apkaward.com/roguelike" title="Roguelike">Roguelike</a></li>
+            <li class="cat-item cat-item-16"><a href="https://apkaward.com/racing" title="Racing">Racing</a></li>
+            <li class="cat-item cat-item-17"><a href="https://apkaward.com/role-playing" title="Role Playing">Role Playing</a></li>
+            <li class="cat-item cat-item-18"><a href="https://apkaward.com/simulation" title="Simulation">Simulation</a></li>
+            <li class="cat-item cat-item-19"><a href="https://apkaward.com/sports" title="Sports">Sports</a></li>
+            <li class="cat-item cat-item-20"><a href="https://apkaward.com/strategy" title="Strategy">Strategy</a></li>
+            <li class="cat-item cat-item-167"><a href="https://apkaward.com/tool" title="App Tool">App Tool</a></li>
+        </ul>
+    </div>
+
+    <div class="mobile-nav"></div>
+
+    <!-- Main Content -->
+    <div class="content row autow agood">
+        <div class="content_box row">
+            <!-- Search Section -->
+            <div style="background-color: #dedede;padding: 20px;position: relative;">
+                <form class="searchform" id="searchform1" method="get" name="searchform" role="search">
+                    <div style="border: 1px solid #cecece;background: #fff;border-radius: 3px;padding-right: 50px;">
+                        <input type="text" value="" name="s" id="s1" placeholder="Search..." autofocus="" style="padding: 10px 0;text-indent: 15px;border-radius: 3px;">
+                        <input type="submit" id="searchsubmit1" value="Search" style="right: 21px;top: 21px;height: 44px;background-position: 15px 12px;width: 50px;border-radius: 0 3px 3px 0;">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Editor's Choice Games -->
+            <div class="Populargames azsz">
+                <div class="most_box" style="border-top: 0;padding-top:20;margin-top:0;">
+                    <h2 class="inx">Editor's Choice Games</h2>
+                    <a href="/editors-choice" class="smore">See More</a>
+                </div>
+                <div class="main-box row">
+                    <div class="topics_boxsoll">
+                        <div class="sollaaa" id="editors-choice-container"></div>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h4>بەشەکان</h4>
-                    <ul>
-                        <li><a href="#">یارییەکان</a></li>
-                        <li><a href="#">ئەپەکان</a></li>
-                        <li><a href="#">یاری مۆدکراو</a></li>
-                        <li><a href="#">فێرکاری</a></li>
-                    </ul>
+            </div>
+
+            <!-- Top New Games -->
+            <div class="Populargames azsz">
+                <div class="most_box">
+                    <h2 class="inx">Top New Games</h2>
+                    <a href="/new" class="smore">See More</a>
                 </div>
-                <div class="footer-links">
-                    <h4>پاڵپشتی</h4>
-                    <ul>
-                        <li><a href="#">پەیوەندیمان پێوە بکە</a></li>
-                        <li><a href="#">پرسیارە دووبارەبووەکان</a></li>
-                        <li><a href="#">ڕێنمایی داگرتن</a></li>
-                        <li><a href="#">ڕاپۆرتکردنی کێشە</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>ئاگاداربە</h4>
-                    <p>ئیمەیلەکەت بنوسە بۆ ئاگاداربوونەوە لە نوێکارییەکان.</p>
-                    <form id="newsletter-form">
-                        <input type="email" placeholder="ئیمەیلەکەت بنوسە">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
+                <div class="main-box row">
+                    <div class="topics_boxsoll">
+                        <div class="sollaaa" id="top-new-games-container"></div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© ٢٠٢٤ هەموو مافێک پارێزراوە. ئەپ ستۆری کوردی.</p>
+
+            <!-- Popular Games -->
+            <div class="Populargames azsz kkoi">
+                <div class="most_box">
+                    <h2 class="inx">Popular Games</h2>
+                    <a href="/popular" class="smore">See More</a>
+                </div>
+                <div class="main-box row">
+                    <div class="topics_boxsoll">
+                        <div class="sollaaa" id="popular-games-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Update Games -->
+            <div class="Populargames pgame csszp">
+                <div class="most_box">
+                    <h2 class="inx">Update Games</h2>
+                    <a href="/mod" class="smore">See More</a>
+                </div>
+                <div class="main-box row" id="update-games-container"></div>
+            </div>
+
+            <!-- Hot Categories -->
+            <div class="Populargames pgame">
+                <div class="most_box">
+                    <h2 class="inx" style="margin-bottom:15px;">Hot Category</h2>
+                    <a href="/category" class="smore">See More</a>
+                </div>
+                <ul class="row uksss" id="categories-container"></ul>
+            </div>
+
+            <!-- Topics Games -->
+            <div class="Populargames pgame">
+                <div class="most_box">
+                    <h2 class="inx csszls">Topics Games</h2>
+                    <a href="/topics" class="smore">See More</a>
+                </div>
+                <div class="topics_box topics_boxsoll">
+                    <ul class="row" id="topics-games-container"></ul>
+                </div>
+            </div>
+
+            <!-- Update Apps -->
+            <div class="Populargames azsz">
+                <div class="most_box">
+                    <h2 class="inx">Update Apps</h2>
+                    <a href="/tool" class="smore">See More</a>
+                </div>
+                <div class="main-box row">
+                    <div class="topics_boxsoll">
+                        <div class="sollaaa" id="update-apps-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ongoing Games -->
+            <div class="Populargames pgame csszp">
+                <div class="most_box">
+                    <h2 class="inx">Ongoing Games</h2>
+                    <a href="/mod" class="smore">See More</a>
+                </div>
+                <div class="main-box row" id="ongoing-games-container"></div>
+                <div class="cssmore"><a href="/mod">Load more games</a></div>
             </div>
         </div>
+    </div>
+
+    <!-- Footer Navigation -->
+    <div class="foot-nav">
+        <div class="aumts">
+            <a class="ishover" href="/"><i><svg width="24" height="24"><use xlink:href="#aaa_home"></use></svg></i>Home</a>
+            <a href="/popular"><i><svg width="24" height="24"><use xlink:href="#aaa_top"></use></svg></i>Popular</a>
+            <a href="/new"><i><svg width="24" height="24"><use xlink:href="#aaa_new"></use></svg></i>New</a>
+            <a href="/mod"><i><svg width="24" height="24"><use xlink:href="#aaa_mod"></use></svg></i>Mod</a>
+            <a href="/editors-choice"><i><svg width="24" height="24"><use xlink:href="#aaa_star"></use></svg></i>Choice</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        © 2020 APKAward.com 
+        <i> 
+            <a href="https://apkaward.com/dmca-copyright-infringement-notification">DMCA</a> - 
+            <a href="/privacy-policy">Privacy Policy</a> - 
+            <a href="/contact">Contact</a>
+        </i>
     </footer>
+
+    <!-- Go Top Button -->
+    <div id="goTop"><i class="fas fa-arrow-up"></i></div>
 
     <script src="script.js"></script>
 </body>
